@@ -125,7 +125,7 @@ def batter_plot(batter_name, player_game='Season', player_inning='Game'):
 
     #plt.savefig("/Users/jamesbrooker/Documents/plots/" + batter_name + ".png", format='png', dpi=300)
     
-    return player_games, innings_list
+    return player_games, innings_list, fig
 
 # Streamlit app
 def main():
@@ -136,7 +136,7 @@ def main():
 
     if batter_name:
         # Step 2: Get the list of games for the selected batter
-        player_games, innings_list, plot_path = batter_plot(batter_name)
+        player_games, innings_list, fig = batter_plot(batter_name)
         
         # Step 3: Select the game
         player_game = st.selectbox("Select Game", player_games)
@@ -155,7 +155,7 @@ def main():
         # Step 6: Display the plot after game and inning selection
         if st.button("Plot"):
             batter_plot(batter_name, player_game, player_inning)
-            st.image(plot_path, caption=f"{batter_name}'s Plot", use_column_width=True)
+            st.image(fig, caption=f"{batter_name}'s Plot", use_column_width=True)
 
 if __name__ == '__main__':
     main()
