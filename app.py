@@ -27,7 +27,7 @@ def batter_plot(batter_name, player_game='Season', player_inning='Game'):
         df1 = df1[df1['Innings'] == player_inning]
 
     background_colour = '#d0f7e3'
-    font_path = '/Users/jamesbrooker/Downloads/Arvo-Regular.ttf'
+    font_path = 'Arvo-Regular.ttf'
     font_props = font_manager.FontProperties(fname=font_path)
     
     fig = plt.figure(figsize=(8, 12))
