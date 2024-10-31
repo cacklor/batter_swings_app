@@ -123,9 +123,9 @@ def batter_plot(batter_name, player_game='Season', player_inning='Game'):
     # Turn off the axis (including ticks and labels)
     ax3.set_axis_off()
 
-    plt.savefig("/Users/jamesbrooker/Documents/plots/" + batter_name + ".png", format='png', dpi=300)
+    #plt.savefig("/Users/jamesbrooker/Documents/plots/" + batter_name + ".png", format='png', dpi=300)
     
-    return player_games, innings_list, "/Users/jamesbrooker/Documents/plots/" + batter_name + ".png"
+    return player_games, innings_list
 
 # Streamlit app
 def main():
