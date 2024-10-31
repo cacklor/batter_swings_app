@@ -75,7 +75,7 @@ def batter_plot(batter_name, player_game='Season', player_inning='Game'):
     ax2.set_xlim(-2, 2)
     ax2.set_ylim(0, 2)
 
-    image_path = '/Users/jamesbrooker/batter_decisions_app/stumps copy.png'
+    image_path = 'stumps copy.png'
     img = mpimg.imread(image_path)
     ax2.imshow(img, extent=[-0.1143, 0.1143, 0, 0.72], aspect='auto', zorder=-1, alpha=0.7)
 
