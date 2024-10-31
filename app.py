@@ -140,10 +140,6 @@ def main():
         # Step 2: Get the list of games for the selected batter
         player_games, innings_list, fig = batter_plot(batter_name)
         
-        img_buffer = BytesIO()
-        fig.savefig(img_buffer, format="png")
-        img_buffer.seek(0)
-        
         # Step 3: Select the game
         player_game = st.selectbox("Select Game", player_games)
         
@@ -160,8 +156,8 @@ def main():
         
         # Step 6: Display the plot after game and inning selection
         if st.button("Plot"):
-            batter_plot(batter_name, player_game, player_inning)
-            st.image(img_buffer, caption=f"{batter_name}'s Plot", use_column_width=True)
+            player_games, innings_list, fig = batter_plot(batter_name, player_game, player_inning)
+            st.pyplot(fig)
 
 if __name__ == '__main__':
     main()
