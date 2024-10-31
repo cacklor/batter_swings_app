@@ -5,7 +5,7 @@ import matplotlib.image as mpimg
 import matplotlib.font_manager as font_manager
 
 # Load the data
-df = pd.read_csv('/Users/jamesbrooker/countywithswingpercentages_updated.csv', low_memory=False)
+df = pd.read_csv('countywithswingpercentages_updated.csv', low_memory=False)
 df['Game'] = df['Match'] + ' ' + df['Date']
 
 # Create a list of unique batter names
